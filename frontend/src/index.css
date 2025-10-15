@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply bg-gray-50;
+}
+
+/* Form input styles */
+input, select, textarea {
+  @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+/* Responsive utilities */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.grid-cols-responsive {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.flex-col {
+  width: auto;
+  max-width: 100%;
+}
+
+.text-white {
+  width: 100%;
+}
+
+/* Responsive styles for admin dashboard */
+.admin-dashboard {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.admin-sidebar {
+  @apply w-full md:w-64 bg-white rounded-lg shadow-md p-4;
+}
+
+.admin-content {
+  @apply flex-1 bg-gray-50 rounded-lg shadow-md p-4;
+}
+
+.admin-actions {
+  @apply flex flex-col sm:flex-row gap-2;
+}
+
+.admin-table {
+  @apply w-full border-collapse border border-gray-200 text-xs sm:text-sm md:text-base;
+}
+
+.admin-table th, .admin-table td {
+  @apply border border-gray-300 px-2 sm:px-3 md:px-4 py-1 sm:py-2;
+}
+
+.admin-buttons {
+  @apply flex gap-2;
+}
+
+.admin-buttons button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.admin-buttons .btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.admin-buttons .btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}

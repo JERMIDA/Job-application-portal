@@ -1,0 +1,37 @@
+{
+    "name": "debo-engineering-backend",
+    "version": "1.0.0",
+    "description": "Backend for DEBO Engineering Job Application System",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js",
+        "migrate": "mysql -u root -p debo_engineering < database_schema.sql",
+        "test": "echo \"No test specified\" && exit 0",
+        "lint": "eslint .",
+        "prestart": "dotenv -e .env",
+        "deploy": "pm2 start app.js --name debo-engineering"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "express-validator": "^7.0.1",
+        "helmet": "^8.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.5-lts.2",
+        "mysql2": "^3.14.0",
+        "natural": "^8.0.1",
+        "nodemailer": "^6.10.0",
+        "pdf-parse": "^1.1.1"
+    },
+    "devDependencies": {
+        "dotenv-cli": "^7.0.0",
+        "eslint": "^8.45.0",
+        "nodemon": "^3.0.2"
+    }
+}
